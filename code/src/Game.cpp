@@ -27,7 +27,7 @@ void Game::setCuboids()
         zs = ((float) rand() / (float) (RAND_MAX)) * (float) (maxEdge - 1.0) + 1.0;
         xt = ((float) rand() / (float) (RAND_MAX)) * (float) baseEdge - (float) maxOrizontal;
         zt = ((float) rand() / (float) (RAND_MAX)) * (float) baseEdge - (float) maxOrizontal;
-        yt = globalHeight; // I added 2 here because if you have you box tower very close to the top and the last cube is generated far from the tower top, it is impossible to get it in the correct position and win
+        yt = globalHeight; 
         localHeight += ys;
         C.setScale(xs, ys, zs);
         C.setTranslation(xt, yt, zt);
