@@ -1,0 +1,374 @@
+\hypertarget{classCuboid}{\section{\-Cuboid \-Class \-Reference}
+\label{classCuboid}\index{\-Cuboid@{\-Cuboid}}
+}
+
+
+{\ttfamily \#include $<$\-Cuboid.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}{\-Cuboid} ()
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classCuboid_a1930b8d1a439aae490d8950de58d37bd}{generate\-Cuboid} ()
+\begin{DoxyCompactList}\small\item\em \-Generates a cuboid at \#height distance from the base. \end{DoxyCompactList}\item 
+void \hyperlink{classCuboid_a7179d060567b9d5222e1ff6b588cbf24}{set\-Translation} (float xt, float yt, float zt)
+\begin{DoxyCompactList}\small\item\em setter for translation parameters \end{DoxyCompactList}\item 
+void \hyperlink{classCuboid_a8a13011bf037acb637798878d111fd5b}{set\-Scale} (float xs, float ys, float zs)
+\begin{DoxyCompactList}\small\item\em setter for scaling params \end{DoxyCompactList}\item 
+void \hyperlink{classCuboid_ab84c4e6d6deb7ff79bf991f1e29b983a}{set\-Color} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em setter for color params \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a32e64e679c9ed3ed4d39c17d3fba42eb}{get\-X\-T} ()
+\begin{DoxyCompactList}\small\item\em getter for translation x \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a9512a37a653d63147a9a17ce26c90c7b}{get\-Y\-T} ()
+\begin{DoxyCompactList}\small\item\em getter for translation y \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a27485c4e640edbf6b4503a7fbd29d858}{get\-Z\-T} ()
+\begin{DoxyCompactList}\small\item\em getter for translation z \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_aa43dc3e9a20ca492b650e5b6f10ed3a2}{get\-X\-S} ()
+\begin{DoxyCompactList}\small\item\em getter for scaling x \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a98c8b126a24c6ecb37869ca86f094b9c}{get\-Y\-S} ()
+\begin{DoxyCompactList}\small\item\em getter for scaling y \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_ae10a417b52e689c7faafa751aa6a8738}{get\-Z\-S} ()
+\begin{DoxyCompactList}\small\item\em getter for scaling z \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a99d6da21d1d9219d124521058697db0a}{get\-Red} ()
+\begin{DoxyCompactList}\small\item\em getter for color r \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a855fb0b28ab85730fa219a219d90d873}{get\-Green} ()
+\begin{DoxyCompactList}\small\item\em getter for color g \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a09d09f8ea0f95f8c186299440bb6d071}{get\-Blue} ()
+\begin{DoxyCompactList}\small\item\em getter for color b \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classCuboid_ac7a66f515aed378ee6beb39458b68d12}{x\-Trans}
+\item 
+float \hyperlink{classCuboid_a56d911db535a33deecf6f73d6d6c2c5e}{y\-Trans}
+\item 
+float \hyperlink{classCuboid_a213e14dd4c1cde9808d86d306ae981db}{z\-Trans}
+\begin{DoxyCompactList}\small\item\em the translation parameters \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a4a2a60fffb0614d1b9ddbc9d9a343edf}{x\-Scale}
+\item 
+float \hyperlink{classCuboid_ab26eda382f4f6739a1c3dda38855d260}{y\-Scale}
+\item 
+float \hyperlink{classCuboid_a8f807289bd2c0f2c649cf3f2375c3ae9}{z\-Scale}
+\begin{DoxyCompactList}\small\item\em the scaling parameters \end{DoxyCompactList}\item 
+float \hyperlink{classCuboid_a1c92597f97d5f7b1e63a583284049c09}{red}
+\item 
+float \hyperlink{classCuboid_a9e474cddb42c3be8d51998da2c959ed6}{green}
+\item 
+float \hyperlink{classCuboid_a728e320487e36a57654232a577f27674}{blue}
+\begin{DoxyCompactList}\small\item\em \-R\-G\-B color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classCuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}{\index{\-Cuboid@{\-Cuboid}!\-Cuboid@{\-Cuboid}}
+\index{\-Cuboid@{\-Cuboid}!Cuboid@{\-Cuboid}}
+\subsubsection[{\-Cuboid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cuboid\-::\-Cuboid} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}
+
+
+\-Constructor. 
+
+
+\begin{DoxyCode}
+{
+    xTrans = yTrans = zTrans = 0.0;
+    xScale = yScale = zScale = 0.0;
+    red = green = blue = 0.0;
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classCuboid_a1930b8d1a439aae490d8950de58d37bd}{\index{\-Cuboid@{\-Cuboid}!generate\-Cuboid@{generate\-Cuboid}}
+\index{generate\-Cuboid@{generate\-Cuboid}!Cuboid@{\-Cuboid}}
+\subsubsection[{generate\-Cuboid}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Cuboid\-::generate\-Cuboid} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a1930b8d1a439aae490d8950de58d37bd}
+
+
+\-Generates a cuboid at \#height distance from the base. 
+
+\-I wanted to have highlighted edges for the cubes and drawing a new wire cube seemed to be the simplest solution 
+\begin{DoxyCode}
+{
+    glColor3f(red, green, blue);
+    glPushMatrix();
+
+    glTranslatef(xTrans, yTrans, zTrans);
+    glScalef(xScale, yScale, zScale);
+    glutSolidCube(1.0);
+
+    glColor3f(0.0, 0.0, 0.0); 
+    glutWireCube(1.0);
+
+    glPopMatrix();
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a09d09f8ea0f95f8c186299440bb6d071}{\index{\-Cuboid@{\-Cuboid}!get\-Blue@{get\-Blue}}
+\index{get\-Blue@{get\-Blue}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Blue}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Blue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a09d09f8ea0f95f8c186299440bb6d071}
+
+
+getter for color b 
+
+
+\begin{DoxyCode}
+{
+    return blue;
+}\end{DoxyCode}
+\hypertarget{classCuboid_a855fb0b28ab85730fa219a219d90d873}{\index{\-Cuboid@{\-Cuboid}!get\-Green@{get\-Green}}
+\index{get\-Green@{get\-Green}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Green}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Green} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a855fb0b28ab85730fa219a219d90d873}
+
+
+getter for color g 
+
+
+\begin{DoxyCode}
+{
+    return green;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a99d6da21d1d9219d124521058697db0a}{\index{\-Cuboid@{\-Cuboid}!get\-Red@{get\-Red}}
+\index{get\-Red@{get\-Red}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Red}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Red} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a99d6da21d1d9219d124521058697db0a}
+
+
+getter for color r 
+
+
+\begin{DoxyCode}
+{
+    return red;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_aa43dc3e9a20ca492b650e5b6f10ed3a2}{\index{\-Cuboid@{\-Cuboid}!get\-X\-S@{get\-X\-S}}
+\index{get\-X\-S@{get\-X\-S}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-X\-S}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-X\-S} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_aa43dc3e9a20ca492b650e5b6f10ed3a2}
+
+
+getter for scaling x 
+
+
+\begin{DoxyCode}
+{
+    return xScale;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a32e64e679c9ed3ed4d39c17d3fba42eb}{\index{\-Cuboid@{\-Cuboid}!get\-X\-T@{get\-X\-T}}
+\index{get\-X\-T@{get\-X\-T}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-X\-T} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a32e64e679c9ed3ed4d39c17d3fba42eb}
+
+
+getter for translation x 
+
+
+\begin{DoxyCode}
+{
+    return xTrans;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a98c8b126a24c6ecb37869ca86f094b9c}{\index{\-Cuboid@{\-Cuboid}!get\-Y\-S@{get\-Y\-S}}
+\index{get\-Y\-S@{get\-Y\-S}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Y\-S} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a98c8b126a24c6ecb37869ca86f094b9c}
+
+
+getter for scaling y 
+
+
+\begin{DoxyCode}
+{
+    return yScale;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a9512a37a653d63147a9a17ce26c90c7b}{\index{\-Cuboid@{\-Cuboid}!get\-Y\-T@{get\-Y\-T}}
+\index{get\-Y\-T@{get\-Y\-T}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Y\-T}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Y\-T} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a9512a37a653d63147a9a17ce26c90c7b}
+
+
+getter for translation y 
+
+
+\begin{DoxyCode}
+{
+    return yTrans;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_ae10a417b52e689c7faafa751aa6a8738}{\index{\-Cuboid@{\-Cuboid}!get\-Z\-S@{get\-Z\-S}}
+\index{get\-Z\-S@{get\-Z\-S}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Z\-S}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Z\-S} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_ae10a417b52e689c7faafa751aa6a8738}
+
+
+getter for scaling z 
+
+
+\begin{DoxyCode}
+{
+    return zScale;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a27485c4e640edbf6b4503a7fbd29d858}{\index{\-Cuboid@{\-Cuboid}!get\-Z\-T@{get\-Z\-T}}
+\index{get\-Z\-T@{get\-Z\-T}!Cuboid@{\-Cuboid}}
+\subsubsection[{get\-Z\-T}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::get\-Z\-T} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a27485c4e640edbf6b4503a7fbd29d858}
+
+
+getter for translation z 
+
+
+\begin{DoxyCode}
+{
+    return zTrans;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_ab84c4e6d6deb7ff79bf991f1e29b983a}{\index{\-Cuboid@{\-Cuboid}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!Cuboid@{\-Cuboid}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Cuboid\-::set\-Color} (
+\begin{DoxyParamCaption}
+\item[{float}]{r, }
+\item[{float}]{g, }
+\item[{float}]{b}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_ab84c4e6d6deb7ff79bf991f1e29b983a}
+
+
+setter for color params 
+
+
+\begin{DoxyCode}
+{
+    red = r;
+    blue = b;
+    green = g;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a8a13011bf037acb637798878d111fd5b}{\index{\-Cuboid@{\-Cuboid}!set\-Scale@{set\-Scale}}
+\index{set\-Scale@{set\-Scale}!Cuboid@{\-Cuboid}}
+\subsubsection[{set\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Cuboid\-::set\-Scale} (
+\begin{DoxyParamCaption}
+\item[{float}]{xs, }
+\item[{float}]{ys, }
+\item[{float}]{zs}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a8a13011bf037acb637798878d111fd5b}
+
+
+setter for scaling params 
+
+
+\begin{DoxyCode}
+{
+    xScale = xs;
+    yScale = ys;
+    zScale = zs;
+}
+\end{DoxyCode}
+\hypertarget{classCuboid_a7179d060567b9d5222e1ff6b588cbf24}{\index{\-Cuboid@{\-Cuboid}!set\-Translation@{set\-Translation}}
+\index{set\-Translation@{set\-Translation}!Cuboid@{\-Cuboid}}
+\subsubsection[{set\-Translation}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Cuboid\-::set\-Translation} (
+\begin{DoxyParamCaption}
+\item[{float}]{xt, }
+\item[{float}]{yt, }
+\item[{float}]{zt}
+\end{DoxyParamCaption}
+)}}\label{classCuboid_a7179d060567b9d5222e1ff6b588cbf24}
+
+
+setter for translation parameters 
+
+
+\begin{DoxyCode}
+{
+    xTrans = xt;
+    yTrans = yt;
+    zTrans = zt;
+}
+\end{DoxyCode}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classCuboid_a728e320487e36a57654232a577f27674}{\index{\-Cuboid@{\-Cuboid}!blue@{blue}}
+\index{blue@{blue}!Cuboid@{\-Cuboid}}
+\subsubsection[{blue}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::blue}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a728e320487e36a57654232a577f27674}
+
+
+\-R\-G\-B color. 
+
+\hypertarget{classCuboid_a9e474cddb42c3be8d51998da2c959ed6}{\index{\-Cuboid@{\-Cuboid}!green@{green}}
+\index{green@{green}!Cuboid@{\-Cuboid}}
+\subsubsection[{green}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::green}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a9e474cddb42c3be8d51998da2c959ed6}
+\hypertarget{classCuboid_a1c92597f97d5f7b1e63a583284049c09}{\index{\-Cuboid@{\-Cuboid}!red@{red}}
+\index{red@{red}!Cuboid@{\-Cuboid}}
+\subsubsection[{red}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::red}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a1c92597f97d5f7b1e63a583284049c09}
+\hypertarget{classCuboid_a4a2a60fffb0614d1b9ddbc9d9a343edf}{\index{\-Cuboid@{\-Cuboid}!x\-Scale@{x\-Scale}}
+\index{x\-Scale@{x\-Scale}!Cuboid@{\-Cuboid}}
+\subsubsection[{x\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::x\-Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a4a2a60fffb0614d1b9ddbc9d9a343edf}
+\hypertarget{classCuboid_ac7a66f515aed378ee6beb39458b68d12}{\index{\-Cuboid@{\-Cuboid}!x\-Trans@{x\-Trans}}
+\index{x\-Trans@{x\-Trans}!Cuboid@{\-Cuboid}}
+\subsubsection[{x\-Trans}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::x\-Trans}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_ac7a66f515aed378ee6beb39458b68d12}
+\hypertarget{classCuboid_ab26eda382f4f6739a1c3dda38855d260}{\index{\-Cuboid@{\-Cuboid}!y\-Scale@{y\-Scale}}
+\index{y\-Scale@{y\-Scale}!Cuboid@{\-Cuboid}}
+\subsubsection[{y\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::y\-Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_ab26eda382f4f6739a1c3dda38855d260}
+\hypertarget{classCuboid_a56d911db535a33deecf6f73d6d6c2c5e}{\index{\-Cuboid@{\-Cuboid}!y\-Trans@{y\-Trans}}
+\index{y\-Trans@{y\-Trans}!Cuboid@{\-Cuboid}}
+\subsubsection[{y\-Trans}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::y\-Trans}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a56d911db535a33deecf6f73d6d6c2c5e}
+\hypertarget{classCuboid_a8f807289bd2c0f2c649cf3f2375c3ae9}{\index{\-Cuboid@{\-Cuboid}!z\-Scale@{z\-Scale}}
+\index{z\-Scale@{z\-Scale}!Cuboid@{\-Cuboid}}
+\subsubsection[{z\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::z\-Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a8f807289bd2c0f2c649cf3f2375c3ae9}
+
+
+the scaling parameters 
+
+\hypertarget{classCuboid_a213e14dd4c1cde9808d86d306ae981db}{\index{\-Cuboid@{\-Cuboid}!z\-Trans@{z\-Trans}}
+\index{z\-Trans@{z\-Trans}!Cuboid@{\-Cuboid}}
+\subsubsection[{z\-Trans}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Cuboid\-::z\-Trans}\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{classCuboid_a213e14dd4c1cde9808d86d306ae981db}
+
+
+the translation parameters 
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Cuboid_8h}{\-Cuboid.\-h}\item 
+src/\hyperlink{Cuboid_8cpp}{\-Cuboid.\-cpp}\end{DoxyCompactItemize}

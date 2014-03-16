@@ -1,0 +1,17 @@
+This game is created by Mihai Baltac.
+
+Controls:
+w,a,s,d -> move the camera 
+
+t,g -> zoom out and in
+
+p -> pause and resume(when paused)
+
+arrows -> move the falling box
+
+When you put the falling box on the right trajectory(the vertical line that goes through it's center intersects the orizontal surface of the previous box), 
+it turns red. Then, you can press <space> to make the box move faster to it's right position.
+
+When you win or lose , a message would be displayed to let you know. Then you can press "r" to restart the game.
+
+q -> to quit the game at any time

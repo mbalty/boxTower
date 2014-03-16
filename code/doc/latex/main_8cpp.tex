@@ -1,0 +1,512 @@
+\hypertarget{main_8cpp}{\section{src/main.cpp \-File \-Reference}
+\label{main_8cpp}\index{src/main.\-cpp@{src/main.\-cpp}}
+}
+{\ttfamily \#include $<$\-G\-L/glut.\-h$>$}\*
+{\ttfamily \#include $<$math.\-h$>$}\*
+{\ttfamily \#include $<$stdio.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include \char`\"{}\-Game.\-h\char`\"{}}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+\-Include dependency graph for main.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_aa08b6afbdf6cfad236b22b4f8ef84784}{print\-\_\-text} (char $\ast$string, int x, int \hyperlink{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y}, void $\ast$font, float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em prints a text in 2d within the window \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a33e20b37682a0492a9e95d13bef17f02}{change\-Size} (int w, int h)
+\begin{DoxyCompactList}\small\item\em changing the size of the whole perspective \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}{display} ()
+\item 
+void \hyperlink{main_8cpp_adba786f63d0a602a9590109bf6a0fd35}{process\-Keys} (unsigned char key, int x, int \hyperlink{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y})
+\item 
+void \hyperlink{main_8cpp_a64f0952205a2d490b6b5f14b806e3eb7}{process\-Special\-Keys} (int key, int x, int \hyperlink{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y})
+\item 
+void \hyperlink{main_8cpp_a2e2052c5c53140b57da96d465a7327fb}{spin} (void)
+\item 
+int \hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{main_8cpp_a103d17f7ae810b61a0196086a9642477}{x\-\_\-pos} = 0
+\begin{DoxyCompactList}\small\item\em \-Useful global variables. \end{DoxyCompactList}\item 
+float \hyperlink{main_8cpp_a17c98f6e8cadb148806771b487612871}{y\-\_\-pos} = 0
+\item 
+float \hyperlink{main_8cpp_aa6a6ed809b84ad77685c8eec5ee5c33e}{z\-\_\-pos} = 0
+\item 
+float \hyperlink{main_8cpp_aadfc5c227ca658a29a59a0ce6fc15792}{theta} = \-M\-\_\-\-P\-I / 6
+\item 
+float \hyperlink{main_8cpp_ab30c622a174639ec92b375db9b2ee56d}{phi} = \-M\-\_\-\-P\-I / 2
+\item 
+float \hyperlink{main_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a}{\-R} = 9
+\item 
+float \hyperlink{main_8cpp_a8030f24154c0e29bcbdf9a153804f214}{scale\-Factor} = 1
+\item 
+float \hyperlink{main_8cpp_ae73a0673059dcf9777cfd15a72c550d0}{game\-Edge} = 10.\-0
+\begin{DoxyCompactList}\small\item\em edge size of the base plance \end{DoxyCompactList}\item 
+float \hyperlink{main_8cpp_a1e4cd87e3e30be6067afb39029fa18dc}{game\-Height} = 20.\-0
+\begin{DoxyCompactList}\small\item\em height to reach for win \end{DoxyCompactList}\item 
+\hyperlink{classGame}{\-Game} \hyperlink{main_8cpp_aae50ced89aff85632f14fc689fc0bf42}{\-G} = \hyperlink{classGame}{\-Game}(\hyperlink{main_8cpp_ae73a0673059dcf9777cfd15a72c550d0}{game\-Edge}, \hyperlink{main_8cpp_a1e4cd87e3e30be6067afb39029fa18dc}{game\-Height})
+\item 
+\hyperlink{classCuboid}{\-Cuboid} \hyperlink{main_8cpp_a2d838a5a773eaf379595382e4a026060}{\-C}
+\item 
+float \hyperlink{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y} = 0
+\begin{DoxyCompactList}\small\item\em displacement of the falling cube \end{DoxyCompactList}\item 
+float \hyperlink{main_8cpp_a7f7e4724cf57d59513b39c5ecc81adc8}{speed} = 0.\-02
+\begin{DoxyCompactList}\small\item\em speed with which the cube falls \end{DoxyCompactList}\item 
+float \hyperlink{main_8cpp_a0f0a98eb24e1f824872a0bf83d4ed9ed}{new\-Height} = \-G.\-global\-Height -\/ (\-G.\-cuboids\mbox{[}0\mbox{]}.get\-Y\-S() / 2)
+\begin{DoxyCompactList}\small\item\em the new height to be reached for win, with reference to the new base(cubes have fallen) \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a37d972ae0b47b9099e30983131d31916}{j} = 0
+\begin{DoxyCompactList}\small\item\em incrementer through the vector of random cuboids \end{DoxyCompactList}\item 
+bool \hyperlink{main_8cpp_ac919b3b7b8dbbccf8e6c21bc8e739931}{right\-Zone} = false
+\begin{DoxyCompactList}\small\item\em weather or not the falling cube has the x, z coordinates within the last fallen cube surface; \end{DoxyCompactList}\item 
+bool \hyperlink{main_8cpp_aafc52927d1d8ec8c41fd4dd90df3d0d8}{\-Game\-Lose} = false
+\begin{DoxyCompactList}\small\item\em true when lose the game \end{DoxyCompactList}\item 
+bool \hyperlink{main_8cpp_a0d3c1ec5f49733633dceaba4c929b9df}{\-Game\-Win} = false
+\begin{DoxyCompactList}\small\item\em true for win \end{DoxyCompactList}\item 
+bool \hyperlink{main_8cpp_ab74ec1300441fc6833417bd30eec89b3}{\-Pause} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{main_8cpp_a33e20b37682a0492a9e95d13bef17f02}{\index{main.\-cpp@{main.\-cpp}!change\-Size@{change\-Size}}
+\index{change\-Size@{change\-Size}!main.cpp@{main.\-cpp}}
+\subsubsection[{change\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf change\-Size} (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a33e20b37682a0492a9e95d13bef17f02}
+
+
+changing the size of the whole perspective 
+
+
+\begin{DoxyCode}
+{
+    if (h == 0)
+        h = 1;
+    float ratio = 1.0 * w / h;
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glViewport(0, 0, w, h);
+    gluPerspective(90, ratio, 1, 1000);
+}
+\end{DoxyCode}
+\hypertarget{main_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}{\index{main.\-cpp@{main.\-cpp}!display@{display}}
+\index{display@{display}!main.cpp@{main.\-cpp}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf display} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a1e5b20fed15743656bb6d2e6a6ea6269}
+
+\begin{DoxyCode}
+{
+    x_pos = R * cos(phi) * cos(theta);
+    y_pos = R * sin(theta);
+    z_pos = R * sin(phi) * cos(theta);
+
+    glClearColor(0.0f, 1.0f, 1.0f, 0.0f);
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+
+    if (cos(theta) >= 0)
+        gluLookAt(x_pos, y_pos, z_pos, 0, 0, 0, 0, 1, 0);
+    else
+        gluLookAt(x_pos, y_pos, z_pos, 0, 0, 0, 0, -1, 0);
+
+
+
+    // the base plane (square)
+    glColor3f(0.0, 0.0, 0.6);
+    glTranslatef(0, -4, 0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-G.baseEdge / 2, 0, -G.baseEdge / 2);
+    glVertex3f(G.baseEdge / 2, 0, -G.baseEdge / 2);
+    glVertex3f(G.baseEdge / 2, 0, G.baseEdge / 2);
+    glVertex3f(-G.baseEdge / 2, 0, G.baseEdge / 2);
+    glEnd();
+
+
+    C = G.cuboids[j];
+    C.setTranslation(C.getXT(), C.getYT() - y, C.getZT());
+
+    float x, z, xa, xb, za, zb;
+
+    if (j > 0)
+    {
+
+        float x = C.getXT();
+        float z = C.getZT();
+
+        float xa = G.cuboids[j - 1].getXT() - (G.cuboids[j - 1].getXS() / 2);
+        float xb = G.cuboids[j - 1].getXT() + (G.cuboids[j - 1].getXS() / 2);
+        float za = G.cuboids[j - 1].getZT() - (G.cuboids[j - 1].getZS() / 2);
+        float zb = G.cuboids[j - 1].getZT() + (G.cuboids[j - 1].getZS() / 2);
+
+        if (x >= xa && x <= xb && z >= za && z <= zb)
+        {
+            C.setColor(0.7, 0.0, 0.0);
+            rightZone = true;
+        } else rightZone = false;
+    }
+
+
+    bool GameOver = GameLose || GameWin;
+    if (!GameOver)
+        C.generateCuboid();
+
+    if (!Pause)
+        y += speed;
+    else
+        print_text((char*) "PAUSED", 3, 10, GLUT_BITMAP_TIMES_ROMAN_24, 1.0, 1.
+      0, 0.0);
+
+    if (y >= newHeight && !GameOver)
+    {
+        y = 0.0;
+        speed = 0.02;
+        C.setColor(0.0, 0.8, 0.0);
+        G.cuboids[j] = C;
+
+        newHeight -= G.cuboids[j].getYS() / 2 + G.cuboids[j + 1.2].getYS() / 2;
+        if (newHeight < C.getYS())
+        {
+            GameWin = true;
+            std::cout << "YOU WIN! Game over!" << std::endl;
+
+        } else if (j > 0 && rightZone == false)
+        {
+            GameLose = true;
+            std::cout << "YOU LOSE! Game over!" << std::endl;
+        }
+        j++;
+    }
+
+
+    if (GameWin) print_text((char*) "YOU WIN! Game over!", 3, 10, 
+      GLUT_BITMAP_TIMES_ROMAN_24, 1.0, 0.0, 1.0);
+    if (GameLose) print_text((char*) "YOU LOOSE! Game over!", 3, 10, 
+      GLUT_BITMAP_TIMES_ROMAN_24, 1.0, 0.0, 1.0);
+
+    if (j > 0)
+    {
+        C.setColor(0.8, 0.0, 0.0);
+        for (int i = 0; i < j; i++)
+        {
+            G.cuboids[i].generateCuboid();
+        }
+    }
+
+
+
+    glutSwapBuffers();
+}
+\end{DoxyCode}
+\hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf main} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glutInitWindowSize(700, 700);
+    glutInitWindowPosition(100, 100);
+    glutCreateWindow("BOX Game - Mihai Baltac");
+    glClearColor(0.0f, 0.9f, 0.9f, 0.0f);
+
+    glEnable(GL_DEPTH_TEST);
+
+    glutReshapeFunc(changeSize);
+    glutDisplayFunc(display);
+
+    //Processing keys function
+    glutKeyboardFunc(processKeys);
+    glutSpecialFunc(processSpecialKeys);
+
+    glMatrixMode(GL_PROJECTION);
+    gluPerspective(90.0, 1.0, 1.0, 1000.0);
+
+    glutIdleFunc(spin);
+
+    glutMainLoop();
+
+
+    return 0;
+}\end{DoxyCode}
+\hypertarget{main_8cpp_aa08b6afbdf6cfad236b22b4f8ef84784}{\index{main.\-cpp@{main.\-cpp}!print\-\_\-text@{print\-\_\-text}}
+\index{print\-\_\-text@{print\-\_\-text}!main.cpp@{main.\-cpp}}
+\subsubsection[{print\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf print\-\_\-text} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{void $\ast$}]{font, }
+\item[{float}]{r, }
+\item[{float}]{g, }
+\item[{float}]{b}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_aa08b6afbdf6cfad236b22b4f8ef84784}
+
+
+prints a text in 2d within the window 
+
+
+\begin{DoxyCode}
+{
+    glColor3f(r, g, b);
+    glRasterPos2i(x, y);
+    int len = strlen(string);
+    for (int i = 0; i < len; i++)
+    {
+        glutBitmapCharacter(font, string[i]);
+    }
+}
+\end{DoxyCode}
+\hypertarget{main_8cpp_adba786f63d0a602a9590109bf6a0fd35}{\index{main.\-cpp@{main.\-cpp}!process\-Keys@{process\-Keys}}
+\index{process\-Keys@{process\-Keys}!main.cpp@{main.\-cpp}}
+\subsubsection[{process\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf process\-Keys} (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_adba786f63d0a602a9590109bf6a0fd35}
+
+\begin{DoxyCode}
+{
+    C = G.cuboids[j];
+    switch (key)
+    {
+        case 'w': // move camera up
+            theta += 0.1;
+            break;
+        case 's': //move camera down
+            theta -= 0.1;
+            break;
+        case 'a': //move camera left
+            phi += 0.1;
+            break;
+        case 'd': // move camera right
+            phi -= 0.1;
+            break;
+        case 't': //zoom out
+            if (R < 100)
+                R += 0.3f;
+            break;
+        case 'g': // zoom in
+            if (R > 4)
+                R -= 0.3f;
+            break;
+        case 'p': //pause the game
+            if ((GameWin || GameLose) == false)
+            {
+                if (Pause)
+                    Pause = false;
+                else
+                    Pause = true;
+            }
+
+            break;
+        case ' ': // when on the right trajectory, you can press space to
+       increase the falling speed
+            speed = 0.2;
+            break;
+        case 'q': // quit
+            exit(0);
+            break;
+        case 'r': //restart
+            if (GameWin || GameLose)
+            {
+                G = Game(gameEdge, gameHeight);
+                GameWin = GameLose = false;
+
+                j = 0;
+                C = G.cuboids[j];
+                y = 0;
+                newHeight = G.globalHeight - (G.cuboids[0].getYS() / 2);
+                rightZone = false;
+                gluPerspective(90.0, 1.0, 1.0, 1000.0);
+            }
+            break;
+    }
+
+    G.cuboids[j] = C;
+}
+\end{DoxyCode}
+\hypertarget{main_8cpp_a64f0952205a2d490b6b5f14b806e3eb7}{\index{main.\-cpp@{main.\-cpp}!process\-Special\-Keys@{process\-Special\-Keys}}
+\index{process\-Special\-Keys@{process\-Special\-Keys}!main.cpp@{main.\-cpp}}
+\subsubsection[{process\-Special\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf process\-Special\-Keys} (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a64f0952205a2d490b6b5f14b806e3eb7}
+
+\begin{DoxyCode}
+{
+    if (!Pause)
+    {
+        C = G.cuboids[j];
+        switch (key)
+        {
+            case GLUT_KEY_UP: //move cuboid forward
+                if (C.getZT() <= -G.baseEdge / 2)
+                    C.setTranslation(C.getXT(), C.getYT(), -G.baseEdge / 2);
+                else
+                    C.setTranslation(C.getXT(), C.getYT(), C.getZT() - 0.2);
+                break;
+            case GLUT_KEY_DOWN: //move cuboid backward
+                if (C.getZT() >= G.baseEdge / 2)
+                    C.setTranslation(C.getXT(), C.getYT(), G.baseEdge / 2);
+                else
+                    C.setTranslation(C.getXT(), C.getYT(), C.getZT() + 0.2);
+                break;
+            case GLUT_KEY_LEFT: // move cuboid to the left
+                if (C.getXT() <= -G.baseEdge / 2)
+                    C.setTranslation(-G.baseEdge / 2, C.getYT(), C.getZT());
+                else
+                    C.setTranslation(C.getXT() - 0.2, C.getYT(), C.getZT());
+                break;
+            case GLUT_KEY_RIGHT: // move cuboid to the right
+                if (C.getXT() >= G.baseEdge / 2)
+                    C.setTranslation(G.baseEdge / 2, C.getYT(), C.getZT());
+                else
+                    C.setTranslation(C.getXT() + 0.2, C.getYT(), C.getZT());
+                break;
+        }
+        G.cuboids[j] = C;
+    }
+}
+\end{DoxyCode}
+\hypertarget{main_8cpp_a2e2052c5c53140b57da96d465a7327fb}{\index{main.\-cpp@{main.\-cpp}!spin@{spin}}
+\index{spin@{spin}!main.cpp@{main.\-cpp}}
+\subsubsection[{spin}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf spin} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a2e2052c5c53140b57da96d465a7327fb}
+
+\begin{DoxyCode}
+{
+    glutPostRedisplay();
+}
+\end{DoxyCode}
+
+
+\subsection{\-Variable \-Documentation}
+\hypertarget{main_8cpp_a2d838a5a773eaf379595382e4a026060}{\index{main.\-cpp@{main.\-cpp}!\-C@{\-C}}
+\index{\-C@{\-C}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Cuboid} {\bf \-C}}}\label{main_8cpp_a2d838a5a773eaf379595382e4a026060}
+\hypertarget{main_8cpp_aae50ced89aff85632f14fc689fc0bf42}{\index{main.\-cpp@{main.\-cpp}!\-G@{\-G}}
+\index{\-G@{\-G}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Game} {\bf \-G} = {\bf \-Game}({\bf game\-Edge}, {\bf game\-Height})}}\label{main_8cpp_aae50ced89aff85632f14fc689fc0bf42}
+\hypertarget{main_8cpp_ae73a0673059dcf9777cfd15a72c550d0}{\index{main.\-cpp@{main.\-cpp}!game\-Edge@{game\-Edge}}
+\index{game\-Edge@{game\-Edge}!main.cpp@{main.\-cpp}}
+\subsubsection[{game\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf game\-Edge} = 10.\-0}}\label{main_8cpp_ae73a0673059dcf9777cfd15a72c550d0}
+
+
+edge size of the base plance 
+
+\hypertarget{main_8cpp_a1e4cd87e3e30be6067afb39029fa18dc}{\index{main.\-cpp@{main.\-cpp}!game\-Height@{game\-Height}}
+\index{game\-Height@{game\-Height}!main.cpp@{main.\-cpp}}
+\subsubsection[{game\-Height}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf game\-Height} = 20.\-0}}\label{main_8cpp_a1e4cd87e3e30be6067afb39029fa18dc}
+
+
+height to reach for win 
+
+\hypertarget{main_8cpp_aafc52927d1d8ec8c41fd4dd90df3d0d8}{\index{main.\-cpp@{main.\-cpp}!\-Game\-Lose@{\-Game\-Lose}}
+\index{\-Game\-Lose@{\-Game\-Lose}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-Game\-Lose}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Game\-Lose} = false}}\label{main_8cpp_aafc52927d1d8ec8c41fd4dd90df3d0d8}
+
+
+true when lose the game 
+
+\hypertarget{main_8cpp_a0d3c1ec5f49733633dceaba4c929b9df}{\index{main.\-cpp@{main.\-cpp}!\-Game\-Win@{\-Game\-Win}}
+\index{\-Game\-Win@{\-Game\-Win}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-Game\-Win}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Game\-Win} = false}}\label{main_8cpp_a0d3c1ec5f49733633dceaba4c929b9df}
+
+
+true for win 
+
+\hypertarget{main_8cpp_a37d972ae0b47b9099e30983131d31916}{\index{main.\-cpp@{main.\-cpp}!j@{j}}
+\index{j@{j}!main.cpp@{main.\-cpp}}
+\subsubsection[{j}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf j} = 0}}\label{main_8cpp_a37d972ae0b47b9099e30983131d31916}
+
+
+incrementer through the vector of random cuboids 
+
+\hypertarget{main_8cpp_a0f0a98eb24e1f824872a0bf83d4ed9ed}{\index{main.\-cpp@{main.\-cpp}!new\-Height@{new\-Height}}
+\index{new\-Height@{new\-Height}!main.cpp@{main.\-cpp}}
+\subsubsection[{new\-Height}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf new\-Height} = \-G.\-global\-Height -\/ (\-G.\-cuboids\mbox{[}0\mbox{]}.get\-Y\-S() / 2)}}\label{main_8cpp_a0f0a98eb24e1f824872a0bf83d4ed9ed}
+
+
+the new height to be reached for win, with reference to the new base(cubes have fallen) 
+
+\hypertarget{main_8cpp_ab74ec1300441fc6833417bd30eec89b3}{\index{main.\-cpp@{main.\-cpp}!\-Pause@{\-Pause}}
+\index{\-Pause@{\-Pause}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-Pause}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Pause} = false}}\label{main_8cpp_ab74ec1300441fc6833417bd30eec89b3}
+\hypertarget{main_8cpp_ab30c622a174639ec92b375db9b2ee56d}{\index{main.\-cpp@{main.\-cpp}!phi@{phi}}
+\index{phi@{phi}!main.cpp@{main.\-cpp}}
+\subsubsection[{phi}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf phi} = \-M\-\_\-\-P\-I / 2}}\label{main_8cpp_ab30c622a174639ec92b375db9b2ee56d}
+\hypertarget{main_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a}{\index{main.\-cpp@{main.\-cpp}!\-R@{\-R}}
+\index{\-R@{\-R}!main.cpp@{main.\-cpp}}
+\subsubsection[{\-R}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-R} = 9}}\label{main_8cpp_a4c4b08e61e92b3da1ed512f4e006f34a}
+\hypertarget{main_8cpp_ac919b3b7b8dbbccf8e6c21bc8e739931}{\index{main.\-cpp@{main.\-cpp}!right\-Zone@{right\-Zone}}
+\index{right\-Zone@{right\-Zone}!main.cpp@{main.\-cpp}}
+\subsubsection[{right\-Zone}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf right\-Zone} = false}}\label{main_8cpp_ac919b3b7b8dbbccf8e6c21bc8e739931}
+
+
+weather or not the falling cube has the x, z coordinates within the last fallen cube surface; 
+
+\hypertarget{main_8cpp_a8030f24154c0e29bcbdf9a153804f214}{\index{main.\-cpp@{main.\-cpp}!scale\-Factor@{scale\-Factor}}
+\index{scale\-Factor@{scale\-Factor}!main.cpp@{main.\-cpp}}
+\subsubsection[{scale\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf scale\-Factor} = 1}}\label{main_8cpp_a8030f24154c0e29bcbdf9a153804f214}
+\hypertarget{main_8cpp_a7f7e4724cf57d59513b39c5ecc81adc8}{\index{main.\-cpp@{main.\-cpp}!speed@{speed}}
+\index{speed@{speed}!main.cpp@{main.\-cpp}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf speed} = 0.\-02}}\label{main_8cpp_a7f7e4724cf57d59513b39c5ecc81adc8}
+
+
+speed with which the cube falls 
+
+\hypertarget{main_8cpp_aadfc5c227ca658a29a59a0ce6fc15792}{\index{main.\-cpp@{main.\-cpp}!theta@{theta}}
+\index{theta@{theta}!main.cpp@{main.\-cpp}}
+\subsubsection[{theta}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf theta} = \-M\-\_\-\-P\-I / 6}}\label{main_8cpp_aadfc5c227ca658a29a59a0ce6fc15792}
+\hypertarget{main_8cpp_a103d17f7ae810b61a0196086a9642477}{\index{main.\-cpp@{main.\-cpp}!x\-\_\-pos@{x\-\_\-pos}}
+\index{x\-\_\-pos@{x\-\_\-pos}!main.cpp@{main.\-cpp}}
+\subsubsection[{x\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf x\-\_\-pos} = 0}}\label{main_8cpp_a103d17f7ae810b61a0196086a9642477}
+
+
+\-Useful global variables. 
+
+\hypertarget{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{\index{main.\-cpp@{main.\-cpp}!y@{y}}
+\index{y@{y}!main.cpp@{main.\-cpp}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf y} = 0}}\label{main_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}
+
+
+displacement of the falling cube 
+
+\hypertarget{main_8cpp_a17c98f6e8cadb148806771b487612871}{\index{main.\-cpp@{main.\-cpp}!y\-\_\-pos@{y\-\_\-pos}}
+\index{y\-\_\-pos@{y\-\_\-pos}!main.cpp@{main.\-cpp}}
+\subsubsection[{y\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf y\-\_\-pos} = 0}}\label{main_8cpp_a17c98f6e8cadb148806771b487612871}
+\hypertarget{main_8cpp_aa6a6ed809b84ad77685c8eec5ee5c33e}{\index{main.\-cpp@{main.\-cpp}!z\-\_\-pos@{z\-\_\-pos}}
+\index{z\-\_\-pos@{z\-\_\-pos}!main.cpp@{main.\-cpp}}
+\subsubsection[{z\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf z\-\_\-pos} = 0}}\label{main_8cpp_aa6a6ed809b84ad77685c8eec5ee5c33e}
